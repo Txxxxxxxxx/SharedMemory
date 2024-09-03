@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/write.dir/src/write.cpp.o CMakeFiles/write.dir/src/SharedMemory.cpp.o -o write 
