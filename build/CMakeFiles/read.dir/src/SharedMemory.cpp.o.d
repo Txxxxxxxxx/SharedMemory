@@ -1,7 +1,7 @@
 CMakeFiles/read.dir/src/SharedMemory.cpp.o: \
- /home/jiu/humanoid_robot/共享内存demo/src/SharedMemory.cpp \
+ /home/jiu/humanoid_robot/SharedMemory/src/SharedMemory.cpp \
  /usr/include/stdc-predef.h \
- /home/jiu/humanoid_robot/共享内存demo/src/SharedMemory.hpp \
+ /home/jiu/humanoid_robot/SharedMemory/src/SharedMemory.hpp \
  /usr/include/x86_64-linux-gnu/sys/ipc.h /usr/include/features.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -146,4 +146,9 @@ CMakeFiles/read.dir/src/SharedMemory.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc /usr/include/c++/9/cstring \
- /usr/include/string.h /usr/include/strings.h
+ /usr/include/string.h /usr/include/strings.h /usr/include/semaphore.h \
+ /usr/include/x86_64-linux-gnu/bits/semaphore.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h

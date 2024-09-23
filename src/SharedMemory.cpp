@@ -14,19 +14,27 @@
     */
 SharedMemory::SharedMemory(const char *filepath, int len, int key_num)
 {
+    // 创建key
     key = ftok(filepath, key_num);
+    memory_len = len;
     if(key < 0)
     {
         throw std::runtime_error("Failed to create key for shared memory");
         printf("create key error!\n");
         return;
     }
+    // 创建共享内存
     shmid = shmget(key, len, IPC_CREAT|0666);
     if(shmid < 0)
     {
         throw std::runtime_error("Failed to create shared memory segment");
         printf("create share mem error!\n");
         return;
+    }
+    // 创建或打开信号量
+    sem = sem_open("/semaphore", O_CREAT, 0666, 1);
+    if (sem == SEM_FAILED) {
+        throw std::runtime_error("sem_open failed");
     }
 }
 
@@ -38,7 +46,16 @@ SharedMemory::SharedMemory(const char *filepath, int len, int key_num)
     */
 SharedMemory::~SharedMemory()
 {
+    // 断开共享内存
     disconnect();
+    // 删除共享内存
+    // remove(); // 等待所有进程都结束后再删除
+    // 关闭信号量
+    sem_close(sem);
+    // 删除信号量
+    // sem_unlink("/semaphore");
+    // 释放信号量
+    // sem_destroy(sem); // 等待所有进程都结束后再释放
 }
 
 /*

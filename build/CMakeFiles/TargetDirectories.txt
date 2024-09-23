@@ -1,4 +1,4 @@
-/home/jiu/humanoid_robot/共享内存demo/build/CMakeFiles/write.dir
-/home/jiu/humanoid_robot/共享内存demo/build/CMakeFiles/read.dir
-/home/jiu/humanoid_robot/共享内存demo/build/CMakeFiles/edit_cache.dir
-/home/jiu/humanoid_robot/共享内存demo/build/CMakeFiles/rebuild_cache.dir
+/home/jiu/humanoid_robot/SharedMemory/build/CMakeFiles/write.dir
+/home/jiu/humanoid_robot/SharedMemory/build/CMakeFiles/read.dir
+/home/jiu/humanoid_robot/SharedMemory/build/CMakeFiles/edit_cache.dir
+/home/jiu/humanoid_robot/SharedMemory/build/CMakeFiles/rebuild_cache.dir

@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/jiu/humanoid_robot/共享内存demo/src/SharedMemory.cpp" "CMakeFiles/read.dir/src/SharedMemory.cpp.o" "gcc" "CMakeFiles/read.dir/src/SharedMemory.cpp.o.d"
-  "/home/jiu/humanoid_robot/共享内存demo/src/read.cpp" "CMakeFiles/read.dir/src/read.cpp.o" "gcc" "CMakeFiles/read.dir/src/read.cpp.o.d"
+  "/home/jiu/humanoid_robot/SharedMemory/src/SharedMemory.cpp" "CMakeFiles/read.dir/src/SharedMemory.cpp.o" "gcc" "CMakeFiles/read.dir/src/SharedMemory.cpp.o.d"
+  "/home/jiu/humanoid_robot/SharedMemory/src/read.cpp" "CMakeFiles/read.dir/src/read.cpp.o" "gcc" "CMakeFiles/read.dir/src/read.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/jiu/humanoid_robot/共享内存demo/src
+CXX_INCLUDES = -I/home/jiu/humanoid_robot/SharedMemory/src
 
 CXX_FLAGS = -std=gnu++14
 

@@ -1,9 +1,22 @@
+/*
+    Author : Xia tian
+    Description : 
+        2024.9.21完成：
+            1. 该类用于创建共享内存,实现进程间通信                  
+            2. 该类提供了连接、断开、删除、读写等功能               
+            3. 该类提供了模板函数，可以读写任意类型的数据          
+        2024.9.23完成：   
+            4. 该类提供了信号量，用于保护共享内存的读写             
+            5. 该类提供了异常处理，当读写越界时，会抛出异常          
+*/
 #pragma once
 #include <sys/ipc.h>
 #include <sys/shm.h>
 #include <stdio.h>
 #include <iostream>
 #include <cstring>
+#include <semaphore.h>
+#include <fcntl.h> 
 
 class SharedMemory
 {
@@ -14,11 +27,25 @@ class SharedMemory
         void* connect();
         void disconnect();
         void remove();
-        template <typename T> void write(T *data, int len, int offset=0){
-            memcpy(beginAddress + offset, data, len * sizeof(T));
+        template <typename T> void write(T *data, int data_num, int offset=0){
+            // 检查是否越界
+            if(offset + data_num > memory_len){
+                throw std::runtime_error("Out of memory range");
+                return;
+            }
+            sem_wait(sem); // 加锁  
+            memcpy(beginAddress + offset, data, data_num * sizeof(T));
+            sem_post(sem); // 解锁
         };
-        template <typename T> void read(T *data, int len, int offset=0){
-            memcpy(data, beginAddress + offset, len * sizeof(T));
+        template <typename T> void read(T *data, int data_num, int offset=0){
+            // 检查是否越界
+            if(offset + data_num > memory_len){
+                throw std::runtime_error("Out of memory range");
+                return;
+            }
+            sem_wait(sem); // 加锁  
+            memcpy(data, beginAddress + offset, data_num * sizeof(T));
+            sem_post(sem); // 解锁
         }
 
 
@@ -27,59 +54,8 @@ class SharedMemory
         int shmid;
         // 起始地址 
         void *beginAddress;
+        // 共享内存的大小
+        int memory_len;
+        // 信号量， 用于保护共享内存的读写
+        sem_t *sem;
 };
-
-
-
-
-
-/***********************************
- * @func ftok
- * @para pathname 一个已经存在的文件名
- * @para proj_id 一个整数，用于生成key值
- * @return 成功时，返回生成的key值
- *           失败时，返回-1，并设置相应的错误码
- *  
- * 只要pathname和proj_id一样，生成的key值就一样（不同应用程序也可以）
- *********************************/
-
-/***********************************
-* @func shmget
-* @para key 共享内存的键值，用于标识共享内存段。通常使用 ftok 函数生成键值。
-* @para size 共享内存段的大小，以字节为单位
-* @para shmflg 共享内存的标志位，用于指定创建共享内存的权限和行为
-* @return 成功时，返回共享内存的标识符（即共享内存的ID）
-* 		  失败时，返回-1，并设置相应的错误码
-* 
-*********************************/
-
-/***********************************
- * @func shmat
- * @para shmid 共享内存的标识符（即共享内存的ID）
- * @para shmaddr 指定共享内存连接到当前进程中的地址位置，通常设置为NULL，由系统自动分配
- * @para shmflg 共享内存的标志位，通常设置为0
- * @return 成功时，返回共享内存连接的地址
- *          失败时，返回-1，并设置相应的错误码
- *  
- * 该函数用于将共享内存连接到当前进程的地址空间中
- *********************************/
-
-/***********************************
- * @func memcpy
- * @para dest 目标地址
- * @para src 源地址
- * @para n 复制的字节数
- * @return 返回目标地址
- *  
- * 该函数用于将源地址的n个字节复制到目标地址
- *********************************/
-
-/***********************************
- * @func shmdt
- * @para shmaddr 共享内存连接的地址
- * @return 成功时，返回0
- *          失败时，返回-1，并设置相应的错误码
- *  
- * 该函数用于将共享内存从当前进程中分离
- *********************************/
-

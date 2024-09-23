@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/read.dir/src/read.cpp.o CMakeFiles/read.dir/src/SharedMemory.cpp.o -o read 
+/usr/bin/c++ CMakeFiles/read.dir/src/read.cpp.o CMakeFiles/read.dir/src/SharedMemory.cpp.o -o read  -lpthread 

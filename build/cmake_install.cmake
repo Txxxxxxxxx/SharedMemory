@@ -1,4 +1,4 @@
-# Install script for directory: /home/jiu/humanoid_robot/共享内存demo
+# Install script for directory: /home/jiu/humanoid_robot/SharedMemory
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jiu/humanoid_robot/共享内存demo/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jiu/humanoid_robot/SharedMemory/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

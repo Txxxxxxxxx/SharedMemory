@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jiu/humanoid_robot/共享内存demo
+CMAKE_SOURCE_DIR = /home/jiu/humanoid_robot/SharedMemory
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jiu/humanoid_robot/共享内存demo/build
+CMAKE_BINARY_DIR = /home/jiu/humanoid_robot/SharedMemory/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/write.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/write.dir/progress.make
 include CMakeFiles/write.dir/flags.make
 
 CMakeFiles/write.dir/src/write.cpp.o: CMakeFiles/write.dir/flags.make
-CMakeFiles/write.dir/src/write.cpp.o: /home/jiu/humanoid_robot/共享内存demo/src/write.cpp
+CMakeFiles/write.dir/src/write.cpp.o: /home/jiu/humanoid_robot/SharedMemory/src/write.cpp
 CMakeFiles/write.dir/src/write.cpp.o: CMakeFiles/write.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jiu/humanoid_robot/共享内存demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/write.dir/src/write.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/write.dir/src/write.cpp.o -MF CMakeFiles/write.dir/src/write.cpp.o.d -o CMakeFiles/write.dir/src/write.cpp.o -c /home/jiu/humanoid_robot/共享内存demo/src/write.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jiu/humanoid_robot/SharedMemory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/write.dir/src/write.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/write.dir/src/write.cpp.o -MF CMakeFiles/write.dir/src/write.cpp.o.d -o CMakeFiles/write.dir/src/write.cpp.o -c /home/jiu/humanoid_robot/SharedMemory/src/write.cpp
 
 CMakeFiles/write.dir/src/write.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/write.dir/src/write.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jiu/humanoid_robot/共享内存demo/src/write.cpp > CMakeFiles/write.dir/src/write.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jiu/humanoid_robot/SharedMemory/src/write.cpp > CMakeFiles/write.dir/src/write.cpp.i
 
 CMakeFiles/write.dir/src/write.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/write.dir/src/write.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jiu/humanoid_robot/共享内存demo/src/write.cpp -o CMakeFiles/write.dir/src/write.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jiu/humanoid_robot/SharedMemory/src/write.cpp -o CMakeFiles/write.dir/src/write.cpp.s
 
 CMakeFiles/write.dir/src/SharedMemory.cpp.o: CMakeFiles/write.dir/flags.make
-CMakeFiles/write.dir/src/SharedMemory.cpp.o: /home/jiu/humanoid_robot/共享内存demo/src/SharedMemory.cpp
+CMakeFiles/write.dir/src/SharedMemory.cpp.o: /home/jiu/humanoid_robot/SharedMemory/src/SharedMemory.cpp
 CMakeFiles/write.dir/src/SharedMemory.cpp.o: CMakeFiles/write.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jiu/humanoid_robot/共享内存demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/write.dir/src/SharedMemory.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/write.dir/src/SharedMemory.cpp.o -MF CMakeFiles/write.dir/src/SharedMemory.cpp.o.d -o CMakeFiles/write.dir/src/SharedMemory.cpp.o -c /home/jiu/humanoid_robot/共享内存demo/src/SharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jiu/humanoid_robot/SharedMemory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/write.dir/src/SharedMemory.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/write.dir/src/SharedMemory.cpp.o -MF CMakeFiles/write.dir/src/SharedMemory.cpp.o.d -o CMakeFiles/write.dir/src/SharedMemory.cpp.o -c /home/jiu/humanoid_robot/SharedMemory/src/SharedMemory.cpp
 
 CMakeFiles/write.dir/src/SharedMemory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/write.dir/src/SharedMemory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jiu/humanoid_robot/共享内存demo/src/SharedMemory.cpp > CMakeFiles/write.dir/src/SharedMemory.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jiu/humanoid_robot/SharedMemory/src/SharedMemory.cpp > CMakeFiles/write.dir/src/SharedMemory.cpp.i
 
 CMakeFiles/write.dir/src/SharedMemory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/write.dir/src/SharedMemory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jiu/humanoid_robot/共享内存demo/src/SharedMemory.cpp -o CMakeFiles/write.dir/src/SharedMemory.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jiu/humanoid_robot/SharedMemory/src/SharedMemory.cpp -o CMakeFiles/write.dir/src/SharedMemory.cpp.s
 
 # Object files for target write
 write_OBJECTS = \
@@ -109,7 +109,7 @@ write: CMakeFiles/write.dir/src/write.cpp.o
 write: CMakeFiles/write.dir/src/SharedMemory.cpp.o
 write: CMakeFiles/write.dir/build.make
 write: CMakeFiles/write.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jiu/humanoid_robot/共享内存demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable write"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jiu/humanoid_robot/SharedMemory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable write"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/write.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/write.dir/clean:
 .PHONY : CMakeFiles/write.dir/clean
 
 CMakeFiles/write.dir/depend:
-	cd /home/jiu/humanoid_robot/共享内存demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jiu/humanoid_robot/共享内存demo /home/jiu/humanoid_robot/共享内存demo /home/jiu/humanoid_robot/共享内存demo/build /home/jiu/humanoid_robot/共享内存demo/build /home/jiu/humanoid_robot/共享内存demo/build/CMakeFiles/write.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/jiu/humanoid_robot/SharedMemory/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jiu/humanoid_robot/SharedMemory /home/jiu/humanoid_robot/SharedMemory /home/jiu/humanoid_robot/SharedMemory/build /home/jiu/humanoid_robot/SharedMemory/build /home/jiu/humanoid_robot/SharedMemory/build/CMakeFiles/write.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/write.dir/depend
 
